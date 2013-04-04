@@ -26,7 +26,7 @@ function! Pepgen(...)
 		else
 			let ret_list = []
 			let last_word = split(getline('.'))[-1]
-			let cmd = printf("echo '%s' | nc localhost 1393", last_word)
+			let cmd = printf("echo '%s' | nc localhost 1392", last_word)
 			let sugg = split(system(cmd))
 			if (len(sugg) > 0)
 				for sug in sugg

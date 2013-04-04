@@ -1,0 +1,11 @@
+read some article about:
+statistical language model next word prediction
+
+user online API for word suggestaion:
+http://words.bighugelabs.com
+
+cache retrived synonyms to sqlite db
+
+
+instead of that use moby thesaurus and vim ctrl-x ctrl-t
+http://icon.shef.ac.uk/Moby/

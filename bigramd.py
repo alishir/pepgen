@@ -85,7 +85,7 @@ class Bigram():
 			try:
 				open(txt_file)
 			except IOError:
-				pdf2txt_cmd = "java -jar ./lib/pdfbox-app-1.8.0.jar ExtractText %s %s" % (pdf, txt_file)
+				pdf2txt_cmd = "java -jar ./lib/pdfbox-app-1.8.0.jar ExtractText \"%s\" \"%s\"" % (pdf, txt_file)
 				os.system(pdf2txt_cmd)
 
 	def suggest(self, word):
