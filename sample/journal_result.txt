@@ -5,6 +5,7 @@ previous studies have shown that there is no difference
 between manual version and computerized version of
 IGT(bechara2000b, bowman2005).
 
+
 Several studies have shown that healthy subjects indicates
 poor performance on IGT. usually IGT performance evaluate in
 one of the three method follows. the simplest evaluation
@@ -33,6 +34,38 @@ movement is based of feature weight that mentioned in table
 1. As can be seen, most subject choices is base on gain
 frequency. 
 
+subjects randomly assigned to each variation of IGT.
+relative weight of decks features calculated  by using
+linear equation systems model that described in
+horstmann2012. in this model for each block of 20 trials a
+linear equation system Ax = b solved, where a_ij is the
+normalized feature i for deck j, and b_i is the portion of
+selections from deck i, and x_i is relative weight of
+feature i. subjects feature weights in each groups varies
+significantly as shown in figure 3. in order to find the
+source of this considerable variance we visualize subjects
+behavior in each group. as mentioned before subject behavior
+analysed by choice by choice selections from adv and dis
+adv decks figure 1. and metric that make a deck advantage or
+disadvantage is features that defined in previous
+paragraph. one of the interesting pattern that exist in
+subjects behavior is random walk movement pattern in
+subjects selections.  as can seen in figure 5 subjects
+behavior base on long-term outcome, all subjects in PPIGT
+exhibit random behavior.
+
+in order to filter out subjects that have random walk
+pattern in their choices trial, we add some artificial random
+subject to each group. Artificial random subject is a
+subject choice pattern in 100 trial that generated randomly
+by choosing each deck with equal probability at each trial.
+we cluster subjects in each group to three cluster after
+adding some artificial subjects to each group. by adding
+artificial random subjects and clustering, subjects that
+have random walk pattern in their choices join the
+artificial random subjects cluster. two other clusters are
+for potential subjects who learned the task and subjects who
+did not learn the task.
 
 -----
 
@@ -49,4 +82,4 @@ Fridberg et al., 2010)
 
 IGT Performance:
 Affect and personality correlates of the Iowa Gambling Task:
-adv - dis
+dv - dis

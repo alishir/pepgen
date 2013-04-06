@@ -48,3 +48,5 @@ function! Pepgen(...)
 endfunction
 
 set omnifunc=Pepgen
+
+" au BufRead,BufNewFile *.txt set textwidth=60
