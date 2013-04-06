@@ -67,6 +67,24 @@ artificial random subjects cluster. two other clusters are
 for potential subjects who learned the task and subjects who
 did not learn the task.
 
+one of the measures that indicates subjects has been learned
+the task is successive selections from advantageous decks.
+after running clustering algorithm on subjects choices in
+each group, and filtering out the random subjects, we label
+the cluster of subjects that have successive selection from
+advantageous decks as learned cluster and label the other
+cluster as unlearned cluster. in order to find if subject
+has successive selection from advantageous decks, we
+consider last 40 trials of task and fit a line to it. if the
+slope of fitted line is greater than alpha, we consider that
+subject has been learned the task. we notice again that
+adv/dis decks depends of feature that we partition decks,
+for example if we consider gain-frequency feature and
+analyse a subject choice pattern, that subject may learned
+the task, however if we consider an other feature the
+subject may did not learn the task. in other words learning
+the task depends on our view of features.
+
 -----
 
 study that indicates poor performance:
