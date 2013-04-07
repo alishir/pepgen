@@ -1,9 +1,9 @@
-# refer to studies that say there is no difference between
-# computer based and paper based IGT
-
 previous studies have shown that there is no difference
 between manual version and computerized version of
 IGT(bechara2000b, bowman2005).
+
+# refer to studies that say there is no difference between
+# computer based and paper based IGT
 
 
 Several studies have shown that healthy subjects indicates
@@ -83,7 +83,41 @@ for example if we consider gain-frequency feature and
 analyse a subject choice pattern, that subject may learned
 the task, however if we consider an other feature the
 subject may did not learn the task. in other words learning
-the task depends on our view of features.
+the task depends on feature that decks partitioned based on.
+
+in order to compare subjects behavior in different groups
+more accurate, for each feature we run clustering algorithm
+on subjects. the result of clustering algorithm is three
+clusters, randoms subjects, learned subjects and unlearned
+subjects. there are some interesting observation after
+clustering subjects of each group in these three clusters.
+the most interesting observation is that, when we run
+clustering base on long-term outcome, nobody in PPIGT group
+learned the task, and most of the subjects in this group
+exhibit random behavior, also some of them did not
+learned the task and have successive selections from
+disadvantageous decks. however if we choose gain frequency
+feature and run clustering based on this feature,
+considerable number of subjects fall into learned cluster.
+behavior of subjects in other groups are also interesting,
+when run clustering base on long-term outcome learning
+occurred in both CPIGT and IGT, but number of learned
+subjects in IGT is appreciably greater that learned subjects
+in CPIGT. also there is no subject in IGT group that exhibit
+random behavior, however there is some subject in CPIGT that
+exhibit random behavior. figure 6 represents the result of
+clustering algorithms base of long-trem outcom and gain
+frequency.  in an attempt to compare number of random
+subjects in each group, we run clustering algorithms 30
+times and count the number of subjecst that fall into random
+cluster. to find out if number of random subjects in groups
+differ significantly we used BOOGH statistical test.  the
+result of BOOGH test on number of subjects that fall into
+random cluster in 30 runs, indicates that there is a
+significante difference between nubmer of subjects that fall
+into random cluster in PPIGT and IGT group.
+
+
 
 -----
 
