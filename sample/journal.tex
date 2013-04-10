@@ -1,0 +1,187 @@
+\documentclass[12pt,twocolumn]{elsarticle}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+\title{Tasks are not Simplex as you Think}
+\author{}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+\section{Material and Methods}
+\section{Results}
+several studies have shown that healthy subjects indicates
+poor performance on IGT. Usually IGT performance evaluate in
+one of the three method follows. The simplest evaluation
+method is total money won, another approach is difference
+between total advantage and disadvantage selections (net
+score), and the third one is pattern of adv/dis selections
+across 20 block
+trials.
+
+
+Each deck in IGT has three distinct feature. These features
+are, long-term outcome, relative number of gain vs loss and
+the relative number of net losses. Combination of these
+features is unique for each deck.
+Normalized feature weight are shown in table \ref{table:igt_features}.
+Decks could be partition into advantage and disadvantage
+group with respect to each feature. For example if we
+consider only gain frequency feature of decks, decks A and C
+are advantage and decks B and D are disadvantage. In this
+study we analyse behavior of each subject in a fine
+granularity manner. For each feature, we analyse choice by
+choice behavior of subjects with respect to advantage/disadvantage decks.
+Figure \ref{fig:sample_sub} shows a subject behavior with respect to each three
+features, selections from advantage deck corresponds to
+upward movements and selections from disadvantage
+decks corresponds to downward movement. The magnitude of
+movement is based of feature weight that mentioned in table \ref{table:igt_features}. 
+As can be seen, most subject choices are base on gain
+frequency. 
+
+\begin{table*}
+\caption{Normalized weight of features in IGT}
+\label{table:igt_features}
+\centering
+\begin{tabular}{cccc}
+\textbf{Deck} & \textbf{Long-term outcome} & \textbf{Gain frequency} & \textbf{Loss frequency} \\ 
+\textbf{A} & -0.86  & -0.86 & -1.47 \\ 
+\textbf{B} & -0.86  &  0.86 &  0.34 \\ 
+\textbf{C} &  0.86  & -0.86 &  0.79 \\ 
+\textbf{D} &  0.86  &  0.86 &  0.34 \\ 
+\end{tabular} 
+\end{table*}
+
+
+\begin{figure}
+\caption{Sample subject performance in different metrics}
+\label{fig:sample_sub}
+\centering
+\includegraphics[scale=0.4]{./img/sample_sub.png}
+\end{figure}
+
+Subjects randomly assigned to each variation of IGT.
+Relative weight of decks features calculated  by using
+linear equation systems model that described in
+horstmann2012. In this model for each block of 20 trials a
+linear equation system $Ax = b$ solved, where $ a_{ij} $ is the
+normalized feature $j$ for deck $i$, and $ b_i $ is the portion of
+selections from deck $i$ in 20 trial, and $ x_j $  is relative weight of
+feature $j$. Subjects feature weights in each groups varies
+significantly as shown in figure \ref{fig:var_in_weights}. In order to find the
+source of this considerable variance we visualize subjects
+behavior in each group. As mentioned before subject behavior
+analysed by trial to trial selections from advantageous and disadvantageous
+decks. The criterion that makes a deck advantageous or disadvantageous is
+selected feature from deck features (long-term outcome, gain frequency, loss
+frequency). 
+
+% one of the interesting pattern that exist in subjects behavior is
+% random walk movement pattern in subjects selections.  as can seen in figure 5
+% subjects behavior base on long-term outcome, all subjects in PPIGT exhibit
+% random behavior.
+
+\begin{figure*}
+\caption{Calculated feature weights for each block}
+\label{fig:var_in_weights}
+\centering
+\includegraphics[scale=0.5]{./img/var_in_weights.png}
+\end{figure*}
+
+In order to filter out subjects that have random selection
+pattern in their choices trial, we add some artificial random
+subject to each group. Artificial random subject is a
+subject choice pattern in 100 trial that generated randomly
+by choosing each deck with equal probability at each trial.
+We cluster subjects in each group to three cluster after
+adding some artificial subjects to each group. By adding
+artificial random subjects and clustering, subjects that
+have random walk pattern in their choices join the
+artificial random subjects cluster. Two other clusters are
+for potential subjects who learned the task and subjects who
+did not learn the task.
+
+One of the measures that indicates subjects has been learned
+the task is successive selections from advantageous decks.
+After running clustering algorithm on subjects choices in
+each group, and filtering out the random subjects, we label
+the cluster of subjects that have successive selection from
+advantageous decks as learned cluster and label the other
+cluster as unlearned cluster. In order to find if subject
+has successive selections from advantageous decks, we
+consider last 60 trials of task and fit a line to it. If the
+slope of fitted line is greater than 0.3, we consider that
+subject has been learned the task. We notice again that
+adv/dis decks depends of feature that we partition decks,
+for example if we consider gain-frequency feature and
+analyse a subject choice pattern, that subject may learned
+the task, however if we consider an other feature the
+subject may did not learn the task. In other words learning
+the task depends on feature that decks partitioned based on.
+
+In order to compare subjects behavior in different groups
+more accurate, for each feature we run clustering algorithm
+on subjects. The result of clustering algorithm is three
+clusters, randoms subjects, learned subjects and unlearned
+subjects. There are some interesting observation after
+clustering subjects of each group in these three clusters.
+The most interesting observation is that, when we run
+clustering base on long-term outcome, nobody in pen \& paper group
+(PPIGT) learned the task, and most of the subjects in this group
+exhibit random behavior, also some of them did not
+learned the task and have successive selections from
+disadvantageous decks. However if we choose gain frequency
+feature and run clustering based on this feature,
+considerable number of subjects fall into learned cluster.
+Behavior of subjects in other groups are also interesting,
+when run clustering base on long-term outcome learning
+occurred in both computerized and manual version of IGT, but number of
+learned subjects in manual version is appreciably greater that learned
+subjects in computerized version. Also there is no subject in IGT group
+that exhibit random behavior, however there is some subject in CPIGT
+that exhibit random behavior. Figure \ref{fig:learning} represents the
+subset of clustering algorithm result base of long-term outcome and gain
+frequency.  In an attempt to compare number of random subjects in each
+group, we run clustering algorithms 30 times and count the number of
+subjects that fall into random cluster. To find out if number of random
+subjects in groups differ significantly we used Kruskal–Wallis statistical test.
+The result of Kruskal–Wallis test on number of subjects that fall into random
+cluster in 30 runs, indicates that there is a significant difference
+between number of subjects that fall into random cluster in PPIGT and
+IGT group.
+
+\begin{figure*}
+\caption{Subset of Clusters}
+\label{fig:learning}
+\centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{./img/outcome_web_learn.png}
+                \caption{\tiny{Manual IGT, Learning Cluster}}
+                \label{a}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{./img/outcome_com_learn.png}
+                \caption{\tiny{Computerized IGT, Learning Cluster}}
+                \label{b}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{./img/outcome_pen_random.png}
+                \caption{\tiny{Pen \& Paper IGT, Random Cluster}}
+                \label{c}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{./img/gain_pen_learn.png}
+                \caption{\tiny{Pen \& Paper IGT, Learning Cluster}}
+                \label{d}
+        \end{subfigure}
+\end{figure*}
+\section{Conclusion}
+\end{document}

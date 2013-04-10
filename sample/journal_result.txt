@@ -10,7 +10,7 @@ Several studies have shown that healthy subjects indicates
 poor performance on IGT. usually IGT performance evaluate in
 one of the three method follows. the simplest evaluation
 method is total money won, another approach is difference
-between total advantage and disadvantage selections, and the
+between total advantage and disadvantage selections(net score), and the
 third one is pattern of adv/dis selections across 20 block
 trials.
 
@@ -106,10 +106,10 @@ subjects in IGT is appreciably greater that learned subjects
 in CPIGT. also there is no subject in IGT group that exhibit
 random behavior, however there is some subject in CPIGT that
 exhibit random behavior. figure 6 represents the result of
-clustering algorithms base of long-trem outcom and gain
+clustering algorithms base of long-trem outcome and gain
 frequency.  in an attempt to compare number of random
 subjects in each group, we run clustering algorithms 30
-times and count the number of subjecst that fall into random
+times and count the number of subjects that fall into random
 cluster. to find out if number of random subjects in groups
 differ significantly we used BOOGH statistical test.  the
 result of BOOGH test on number of subjects that fall into
