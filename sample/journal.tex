@@ -12,6 +12,246 @@
 \maketitle
 \section{Introduction}
 \section{Material and Methods}
+
+We assessed the performance of three
+distinct groups of participants in Iowa
+gambling task and two variants of it, in
+order to found the effect of task
+representation in decision making
+behavior of participants. Participants'
+performance is modeled with a set of
+linear equations and a time series based
+distance method was used to cluster
+participants in each group to find the
+effect of task representation on
+learning behavior of participants.
+
+% payam section & feature of each deck
+
+Performance of three distinct groups of
+participants in Iowa gambling task and
+two variants of it evaluated.  The first
+variant is the computerized version of
+it, and the second one is computerized
+version without access to pen and paper.
+Demographic information of the
+participants in the three tasks is given
+in table \ref{table:demographic}.
+The distribution of the rewards and
+punishments in the three tasks is the
+same. The only difference is in the way
+of representing the task.  In the first
+task, the participants should play a
+real card task (RCT). In the first
+variant of the Computerized Task (CT),
+participants should do the same task,
+while it is represented by a simple
+computer program not by real cards. In
+the Computerized with Pen and Paper Task
+(CPPT), the task is represented by the
+same computer program and the
+participants have access to pen and
+paper to freely make notes.  In our
+task, similar to Iowa gambling task
+subjects are invited to choose on each
+trial a card from one of four stationary
+decks, named as A, B, C and D. With each
+selection, the participant is rewarded
+by some points, but every so often a
+penalty is also given. In addition to
+immediate reward and punishment of each
+deck, there is two other features for
+each deck that makes each deck unique.
+The second feature of each deck is the
+relative number of gain vs loss and the
+third feature is relative number of net
+losses.  Normalized feature weights are
+shown in table \ref{table:igt_features}.
+Based of each of these three features
+decks could be partitioned as
+good and bad decks.
+
+\begin{table*}
+\caption{Demographic data of the
+participants.}
+\label{table:demographic}
+\centering
+\begin{tabular}{cccc}
+\textbf{Experiment} & \textbf{No. of
+participants} & \textbf{No. of females}
+& \textbf{Age range} \\ 
+\textbf{Manual} & 32  & 6 & 19-25 \\ 
+\textbf{Computerized} & 36  &  9 & 19-25 \\ 
+\textbf{Pen \& Paper} & 26  & 5 &  19-25 \\ 
+\end{tabular} 
+\end{table*}
+
+\begin{table*}
+\caption{Normalized weight of features in IGT}
+\label{table:igt_features}
+\centering
+\begin{tabular}{cccc}
+\textbf{Deck} & \textbf{Long-term outcome} & \textbf{Gain frequency} & \textbf{Loss frequency} \\ 
+\textbf{A} & -0.86  & -0.86 & -1.47 \\ 
+\textbf{B} & -0.86  &  0.86 &  0.34 \\ 
+\textbf{C} &  0.86  & -0.86 &  0.79 \\ 
+\textbf{D} &  0.86  &  0.86 &  0.34 \\ 
+\end{tabular} 
+\end{table*}
+
+The instructions were given to the
+participants verbally before all the
+tasks.  The instructions were also
+available on the screen at the start
+time of the CT and CPPT. In the RCT,
+some regular instructions, similar to
+those in Bechara et al. are given, But
+in the CT, in addition to the regular
+instructions, the experimenter told the
+participants: "It is important to know
+that the computer is not an active agent
+in this game. The game is fair. The
+computer does not change the order of
+the cards. You can imagine that there
+are four decks on a table in front of
+you." In the CPPT, the instructions were
+similar to the CT but the experimenter
+added: "You will have a pen and a paper
+to write down notes. I want you to
+utilize them to increase your points."
+In fact, we utilized a common belief
+that solving a complicated problem
+requires pen and paper, to change
+subject belief about task complexity,
+and represent the task more complex than
+usual.
+
+
+% linear equation section
+Performance of participants was modeled
+with a set of linear equations that
+described by horstmann et al.. In that
+model, for each block of 20 trial, a set
+of linear equation $Ax = b$ solved,
+where $a_ij$ is the normalized weight of
+feature $j$ in deck $i$, $x_j$ in the
+corresponding weight of feature $j$, and
+$b_i$ is the portion of participant
+selection from deck $i$. The result of
+solving the given equation is a weight
+column $x$ that indicates participant
+preference on each feature. By
+calculating these weights one can find
+the dominant decks feature that
+considered by subjects.
+
+% clustering section
+In order to analyse learning behavior in
+each group, subjects in each group
+clustered in to three clusters. These three clusters
+are subjects who learned the task,
+subjects who have random behavior, and
+subjects who didn't learn the task.  The
+clustering method deal with subjects
+choices in all 100 trial. Before
+applying clustering method, subject
+choices in 100 trial preprocessed and
+converted to good/bad selections across
+trials. As mentioned before each deck in
+IGT has three distinct features, and
+decks could be categorized as good/bad
+based on each feature. Each selection
+from good decks converted to an upward
+movement, and each selection from bad
+deck mapped to a downward movement. The
+movement step size obtained from
+normalization of feature that
+categorized decks to good/bad decks. 
+The result of
+preprocessing step is a time series that
+indicates subject behavior across times.
+The clustering method deals with these
+time series. The similarity measure that
+used by clustering algorithm is based on
+dynamic time wrapping algorithm. The
+main reason for using dynamic time
+wrapping algorithms is its ability to
+consider time shift in time series. Time
+shift consideration is important because
+many subjects may have similar behavior
+in their choices but with some time
+shift, and the clustering algorithm
+should put these subjects in to same
+cluster. 
+
+% For
+% example, a portion of subject original
+% selection in IGT, and the result of
+% preprocessing based on gain frequency
+% show in fig 1. 
+
+% exaple of distance with and without dtw.
+
+To extract subjects with random
+behavior, some artificial random
+subjects added to each group. Artificial
+random subjects, are selection behaviors
+that each deck selected with equal
+probability in 100 trials. 
+Before applying clustering algorithm, some
+artificial subject added to each group.
+After running
+clustering algorithm, a simple
+post-processing routine run on obtained
+clusters in order to label clusters.
+Cluster with maximum number of random
+artificial subject labeled as random
+cluster and all real subjects that
+belong to that cluster treat as subjects
+with random behavior. For the other two
+clusters, a line fitted to last 60
+trials of time series in that cluster.
+If the slope of fitted line greater that
+0.3 that cluster labeled as learned
+otherwise labeled as unlearned.
+Schematic of clustering steps is shown
+in figure \ref{fig:clustering}.
+
+\begin{figure*}
+\caption{Clustering steps}
+\label{fig:clustering}
+\centering
+\includegraphics[scale=0.6]{./img/clustering.png}
+\end{figure*}
+
+% static comparison between clustering
+% resutl
+Two ranked based statical test applied
+in order to compare the effect of task
+representation on performance of each
+group. One statistical test applied
+within groups, and the other applied
+between groups. Statistical test that
+applied within groups, was Friedman
+test. The purpose of applied Friedman
+test was to identify dominant deck
+feature that considered by subjects in
+the group. The second statistical test
+was between groups. The purpose of this
+test was to identify the effect of task
+representation on learning behavior of
+subjects.  The statistical test that
+applied between groups was
+Kruskal-Wallis test, because the
+possibility of unequal samples from each
+group. For each feature of decks, the
+clustering algorithm was ran, and then
+the Kruskal-Wallis test was applied to
+find the effect of task representation
+on learning behavior base on selected
+feature of decks.
+
+
+% \input{result.tex}
 \section{Conclusion}
-\input{result.tex}
 \end{document}
