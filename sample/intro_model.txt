@@ -1,0 +1,17 @@
+======
+Introduction Model
+======
+
+
+1. importance of subject
+2. some more description
+3. some example of importance
+4. some weakness ---*
+
+5. how cover weakness
+6. review some previous methods
+7. note the weakness of previous research, 
+
+8. explain the contribution of this study
+9. short explanation of methods
+10. short explanation of results
