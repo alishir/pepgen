@@ -12,36 +12,79 @@
 \maketitle
 \section{Introduction}
 \section{Material and Methods}
-\section{Results}
-several studies have shown that healthy subjects indicates
-poor performance on IGT. Usually IGT performance evaluate in
-one of the three method follows. The simplest evaluation
-method is total money won, another approach is difference
-between total advantage and disadvantage selections (net
-score), and the third one is pattern of adv/dis selections
-across 20 block
-trials.
 
+We assessed the performance of three
+distinct groups of participants in Iowa
+gambling task and two variants of it, in
+order to found the effect of task
+representation in decision making
+behavior of participants. Participants'
+performance is modeled with a set of
+linear equations and a time series based
+distance method was used to cluster
+participants in each group to find the
+effect of task representation on
+learning behavior of participants.
 
-Each deck in IGT has three distinct feature. These features
-are, long-term outcome, relative number of gain vs loss and
-the relative number of net losses. Combination of these
-features is unique for each deck.
-Normalized feature weight are shown in table \ref{table:igt_features}.
-Decks could be partition into advantage and disadvantage
-group with respect to each feature. For example if we
-consider only gain frequency feature of decks, decks A and C
-are advantage and decks B and D are disadvantage. In this
-study we analyse behavior of each subject in a fine
-granularity manner. For each feature, we analyse choice by
-choice behavior of subjects with respect to advantage/disadvantage decks.
-Figure \ref{fig:sample_sub} shows a subject behavior with respect to each three
-features, selections from advantage deck corresponds to
-upward movements and selections from disadvantage
-decks corresponds to downward movement. The magnitude of
-movement is based of feature weight that mentioned in table \ref{table:igt_features}. 
-As can be seen, most subject choices are base on gain
-frequency. 
+% payam section & feature of each deck
+
+Performance of three distinct groups of
+participants in Iowa gambling task and
+two variants of it evaluated.  The first
+variant is the computerized version of
+it, and the second one is computerized
+version without access to pen and paper.
+Demographic information of the
+participants in the three tasks is given
+in table \ref{table:demographic}.
+The distribution of the rewards and
+punishments in the three tasks is the
+same. The only difference is in the way
+of representing the task.  In the first
+task, the participants should play a
+real card task (RCT). In the first
+variant of the Computerized Task (CT),
+participants should do the same task,
+while it is represented by a simple
+computer program not by real cards. In
+the Computerized with Pen and Paper Task
+(CPPT), the task is represented by the
+same computer program and the
+participants have access to pen and
+paper to freely make notes.  In our
+task, similar to Iowa gambling task
+subjects are invited to choose on each
+trial a card from one of four stationary
+decks, named as A, B, C and D. With each
+selection, the participant is rewarded
+by some points, but every so often a
+penalty is also given. In addition to
+immediate reward and punishment of each
+deck, there is two other features for
+each deck that makes each deck unique.
+The second feature of each deck is the
+relative number of gain vs loss and the
+third feature is relative number of net
+losses.  Normalized feature weights are
+shown in table \ref{table:igt_features}.
+Based of each of these three features
+decks could be partitioned as
+good and bad decks.
+
+\begin{table*}
+\caption{Demographic data of the
+participants.}
+\label{table:demographic}
+\centering
+\begin{tabular}{cccc}
+\textbf{Experiment} & \textbf{No. of
+participants} & \textbf{No. of females}
+& \textbf{Age range} \\ 
+\textbf{Manual} & 32  & 6 & 19-25 \\ 
+\textbf{Computerized} & 36  &  9 & 19-25 \\ 
+\textbf{Pen \& Paper} & 26  & 5 &  19-25 \\ 
+\end{tabular} 
+\end{table*}
 
 \begin{table*}
 \caption{Normalized weight of features in IGT}
@@ -56,132 +99,159 @@ frequency.
 \end{tabular} 
 \end{table*}
 
+The instructions were given to the
+participants verbally before all the
+tasks.  The instructions were also
+available on the screen at the start
+time of the CT and CPPT. In the RCT,
+some regular instructions, similar to
+those in Bechara et al. are given, But
+in the CT, in addition to the regular
+instructions, the experimenter told the
+participants: "It is important to know
+that the computer is not an active agent
+in this game. The game is fair. The
+computer does not change the order of
+the cards. You can imagine that there
+are four decks on a table in front of
+you." In the CPPT, the instructions were
+similar to the CT but the experimenter
+added: "You will have a pen and a paper
+to write down notes. I want you to
+utilize them to increase your points."
+In fact, we utilized a common belief
+that solving a complicated problem
+requires pen and paper, to change
+subject belief about task complexity,
+and represent the task more complex than
+usual.
 
-\begin{figure}
-\caption{Sample subject performance in different metrics}
-\label{fig:sample_sub}
-\centering
-\includegraphics[scale=0.4]{./img/sample_sub.png}
-\end{figure}
 
-Subjects randomly assigned to each variation of IGT.
-Relative weight of decks features calculated  by using
-linear equation systems model that described in
-horstmann2012. In this model for each block of 20 trials a
-linear equation system $Ax = b$ solved, where $ a_{ij} $ is the
-normalized feature $j$ for deck $i$, and $ b_i $ is the portion of
-selections from deck $i$ in 20 trial, and $ x_j $  is relative weight of
-feature $j$. Subjects feature weights in each groups varies
-significantly as shown in figure \ref{fig:var_in_weights}. In order to find the
-source of this considerable variance we visualize subjects
-behavior in each group. As mentioned before subject behavior
-analysed by trial to trial selections from advantageous and disadvantageous
-decks. The criterion that makes a deck advantageous or disadvantageous is
-selected feature from deck features (long-term outcome, gain frequency, loss
-frequency). 
+% linear equation section
+Performance of participants was modeled
+with a set of linear equations that
+described by horstmann et al.. In that
+model, for each block of 20 trial, a set
+of linear equation $Ax = b$ solved,
+where $a_ij$ is the normalized weight of
+feature $j$ in deck $i$, $x_j$ in the
+corresponding weight of feature $j$, and
+$b_i$ is the portion of participant
+selection from deck $i$. The result of
+solving the given equation is a weight
+column $x$ that indicates participant
+preference on each feature. By
+calculating these weights one can find
+the dominant decks feature that
+considered by subjects.
 
-% one of the interesting pattern that exist in subjects behavior is
-% random walk movement pattern in subjects selections.  as can seen in figure 5
-% subjects behavior base on long-term outcome, all subjects in PPIGT exhibit
-% random behavior.
+% clustering section
+In order to analyse learning behavior in
+each group, subjects in each group
+clustered in to three clusters. These three clusters
+are subjects who learned the task,
+subjects who have random behavior, and
+subjects who didn't learn the task.  The
+clustering method deal with subjects
+choices in all 100 trial. Before
+applying clustering method, subject
+choices in 100 trial preprocessed and
+converted to good/bad selections across
+trials. As mentioned before each deck in
+IGT has three distinct features, and
+decks could be categorized as good/bad
+based on each feature. Each selection
+from good decks converted to an upward
+movement, and each selection from bad
+deck mapped to a downward movement. The
+movement step size obtained from
+normalization of feature that
+categorized decks to good/bad decks. 
+The result of
+preprocessing step is a time series that
+indicates subject behavior across times.
+The clustering method deals with these
+time series. The similarity measure that
+used by clustering algorithm is based on
+dynamic time wrapping algorithm. The
+main reason for using dynamic time
+wrapping algorithms is its ability to
+consider time shift in time series. Time
+shift consideration is important because
+many subjects may have similar behavior
+in their choices but with some time
+shift, and the clustering algorithm
+should put these subjects in to same
+cluster. 
+
+% For
+% example, a portion of subject original
+% selection in IGT, and the result of
+% preprocessing based on gain frequency
+% show in fig 1. 
+
+% exaple of distance with and without dtw.
+
+To extract subjects with random
+behavior, some artificial random
+subjects added to each group. Artificial
+random subjects, are selection behaviors
+that each deck selected with equal
+probability in 100 trials. 
+Before applying clustering algorithm, some
+artificial subject added to each group.
+After running
+clustering algorithm, a simple
+post-processing routine run on obtained
+clusters in order to label clusters.
+Cluster with maximum number of random
+artificial subject labeled as random
+cluster and all real subjects that
+belong to that cluster treat as subjects
+with random behavior. For the other two
+clusters, a line fitted to last 60
+trials of time series in that cluster.
+If the slope of fitted line greater that
+0.3 that cluster labeled as learned
+otherwise labeled as unlearned.
+Schematic of clustering steps is shown
+in figure \ref{fig:clustering}.
 
 \begin{figure*}
-\caption{Calculated feature weights for each block}
-\label{fig:var_in_weights}
+\caption{Clustering steps}
+\label{fig:clustering}
 \centering
-\includegraphics[scale=0.5]{./img/var_in_weights.png}
+\includegraphics[scale=0.6]{./img/clustering.png}
 \end{figure*}
 
-In order to filter out subjects that have random selection
-pattern in their choices trial, we add some artificial random
-subject to each group. Artificial random subject is a
-subject choice pattern in 100 trial that generated randomly
-by choosing each deck with equal probability at each trial.
-We cluster subjects in each group to three cluster after
-adding some artificial subjects to each group. By adding
-artificial random subjects and clustering, subjects that
-have random walk pattern in their choices join the
-artificial random subjects cluster. Two other clusters are
-for potential subjects who learned the task and subjects who
-did not learn the task.
+% static comparison between clustering
+% resutl
+Two ranked based statical test applied
+in order to compare the effect of task
+representation on performance of each
+group. One statistical test applied
+within groups, and the other applied
+between groups. Statistical test that
+applied within groups, was Friedman
+test. The purpose of applied Friedman
+test was to identify dominant deck
+feature that considered by subjects in
+the group. The second statistical test
+was between groups. The purpose of this
+test was to identify the effect of task
+representation on learning behavior of
+subjects.  The statistical test that
+applied between groups was
+Kruskal-Wallis test, because the
+possibility of unequal samples from each
+group. For each feature of decks, the
+clustering algorithm was ran, and then
+the Kruskal-Wallis test was applied to
+find the effect of task representation
+on learning behavior base on selected
+feature of decks.
 
-One of the measures that indicates subjects has been learned
-the task is successive selections from advantageous decks.
-After running clustering algorithm on subjects choices in
-each group, and filtering out the random subjects, we label
-the cluster of subjects that have successive selection from
-advantageous decks as learned cluster and label the other
-cluster as unlearned cluster. In order to find if subject
-has successive selections from advantageous decks, we
-consider last 60 trials of task and fit a line to it. If the
-slope of fitted line is greater than 0.3, we consider that
-subject has been learned the task. We notice again that
-adv/dis decks depends of feature that we partition decks,
-for example if we consider gain-frequency feature and
-analyse a subject choice pattern, that subject may learned
-the task, however if we consider an other feature the
-subject may did not learn the task. In other words learning
-the task depends on feature that decks partitioned based on.
 
-In order to compare subjects behavior in different groups
-more accurate, for each feature we run clustering algorithm
-on subjects. The result of clustering algorithm is three
-clusters, randoms subjects, learned subjects and unlearned
-subjects. There are some interesting observation after
-clustering subjects of each group in these three clusters.
-The most interesting observation is that, when we run
-clustering base on long-term outcome, nobody in pen \& paper group
-(PPIGT) learned the task, and most of the subjects in this group
-exhibit random behavior, also some of them did not
-learned the task and have successive selections from
-disadvantageous decks. However if we choose gain frequency
-feature and run clustering based on this feature,
-considerable number of subjects fall into learned cluster.
-Behavior of subjects in other groups are also interesting,
-when run clustering base on long-term outcome learning
-occurred in both computerized and manual version of IGT, but number of
-learned subjects in manual version is appreciably greater that learned
-subjects in computerized version. Also there is no subject in IGT group
-that exhibit random behavior, however there is some subject in CPIGT
-that exhibit random behavior. Figure \ref{fig:learning} represents the
-subset of clustering algorithm result base of long-term outcome and gain
-frequency.  In an attempt to compare number of random subjects in each
-group, we run clustering algorithms 30 times and count the number of
-subjects that fall into random cluster. To find out if number of random
-subjects in groups differ significantly we used Kruskal–Wallis statistical test.
-The result of Kruskal–Wallis test on number of subjects that fall into random
-cluster in 30 runs, indicates that there is a significant difference
-between number of subjects that fall into random cluster in PPIGT and
-IGT group.
-
-\begin{figure*}
-\caption{Subset of Clusters}
-\label{fig:learning}
-\centering
-        \begin{subfigure}[b]{0.4\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{./img/outcome_web_learn.png}
-                \caption{\tiny{Manual IGT, Learning Cluster}}
-                \label{a}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.4\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{./img/outcome_com_learn.png}
-                \caption{\tiny{Computerized IGT, Learning Cluster}}
-                \label{b}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.4\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{./img/outcome_pen_random.png}
-                \caption{\tiny{Pen \& Paper IGT, Random Cluster}}
-                \label{c}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.4\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{./img/gain_pen_learn.png}
-                \caption{\tiny{Pen \& Paper IGT, Learning Cluster}}
-                \label{d}
-        \end{subfigure}
-\end{figure*}
+% \input{result.tex}
 \section{Conclusion}
 \end{document}
