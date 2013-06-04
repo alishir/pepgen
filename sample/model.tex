@@ -1,18 +1,21 @@
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
 
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{hyperref}
 
-\title{Simple Decision Making Model in IGT}
+\title{Simple Decision Making Model for IGT}
 \author{}
 
 \begin{document}
 \maketitle
 \section{Model}
-There are lots of variables that influence subject decision even in a simple task like IGT.
-Below is the list of variables that can affect decision making process:
+
+There are lots of variables that influence subject decision even in a simple
+task like IGT.  Below is the list of variables that can affect sequential
+decision making process:
+
 \begin{itemize}
 	\item Age
 	\item Sex
@@ -20,9 +23,35 @@ Below is the list of variables that can affect decision making process:
 	\item Personality
 	\item Mood
 	\item Memory
+	\item Number of previous decisions
+	\item Estimated payoffs
 \end{itemize}
 
-In the previous study we found that behavior of subjects spawn over three different strategies.
+In the previous study we found that behavior of subjects spawn over three
+different strategies, peoples who maximize their long-term outcome, peoples who
+enjoyed gain frequency, and peoples who are loss avers.
+
+In this report, we describe a simple model that includes some of the
+aforesaid variables. Variables that included in the current model are:
+
+\begin{itemize}
+	\item Some personality traits, reward seeking, fun seeking, loss aversion
+	\item Number of previous decisions
+	\item Estimated payoffs
+\end{itemize}
+
+The model is a simple Bayesian network that span over the time. In the
+mathematical notion, decision variable affected by included variables, and we
+have the following conditional probability:
+
+\[
+	P(D | O, G, L, T, E)
+\]
+
+Where $ O, G, L $ are discrete variables that encode intensity of long-term
+reward maximization, instant reward affection, and loss aversion traits. $ T $  is
+the time that decision has been made and $ E $ is the estimated payoff.
+
 
 \end{document}
 
