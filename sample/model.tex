@@ -4,13 +4,15 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{hyperref}
+\usepackage{amsmath}
 
 \title{Simple Decision Making Model for IGT}
 \author{}
+\date{}
 
 \begin{document}
 \maketitle
-\section{Model}
+\section*{Model}
 
 There are lots of variables that influence subject decision even in a simple
 task like IGT.  Below is the list of variables that can affect sequential
@@ -31,11 +33,11 @@ In the previous study we found that behavior of subjects spawn over three
 different strategies, peoples who maximize their long-term outcome, peoples who
 enjoyed gain frequency, and peoples who are loss avers.
 
-In this report, we describe a simple model that includes some of the
-aforesaid variables. Variables that included in the current model are:
+In this report, we describe a simple model that includes some of the aforesaid
+variables. Variables that included in the current model are:
 
 \begin{itemize}
-	\item Some personality traits, reward seeking, fun seeking, loss aversion
+	\item Some personality traits
 	\item Number of previous decisions
 	\item Estimated payoffs
 \end{itemize}
@@ -49,8 +51,43 @@ have the following conditional probability:
 \]
 
 Where $ O, G, L $ are discrete variables that encode intensity of long-term
-reward maximization, instant reward affection, and loss aversion traits. $ T $  is
-the time that decision has been made and $ E $ is the estimated payoff.
+reward maximization, instant reward affection, and loss aversion traits. $ T $
+is the time that decision has been made and $ E $ is the estimated payoff.
+
+We assume that $ O, G, L $ are independent from each other but all of them
+dependent on $E$, also we assume that $ T $ is independent from all other
+variables. In summary:
+
+\[
+	P(D | O, G, L, T, E) = P(D | O, E) P(D | G, E) P(D | L, E) P(D | T)
+\]
+
+We also assume that the previous decision doesn't influence current decision,
+but the result of previous decision updates the value of estimated payoff, $ E
+$. Figure \ref{fig:bn_model} shown the relation between variables.
+
+\begin{figure}[b]
+\caption{Relation between variables in model}
+\label{fig:bn_model}
+\centering
+\includegraphics[scale=0.4]{./img/bn_model.png}
+\end{figure}
+
+The last things about the model are the decision making mechanism and estimated
+payoff calculation method. Estimated payoff calculation is based on average and
+normalization, it aggregates previous reward and punishments, and extract each
+feature from them.  Basis of decision making mechanism is epsilon greedy
+decision making method, with some modification to consider time effect.
+
+\[
+	P(D | O, G, L, T, E) = \epsilon-Greedy(E_{4 \times 3} \times [O, G, L]^{'}) exp(T/T^{*})
+\]
+
+Where $\epsilon-Greedy([l_1, \dots, l_n])$ calculate $\dfrac{e^{l_j}}{\sum_{i = 1}^{n} e^{l_i}}$ for each $l_j$, 
+and $T^{*}$ is the total time of the IGT game, here is $100$.
+The result of $E_{4 \times 3} \times [O, G, L]^{'}$ is the subjective aggregated value for each deck.
+$E_{4 \times 3}$ is a matrix that encode estimated value of each feature for each deck, and $[O, G, L]$ is the 
+importance of each feature.
 
 
 \end{document}
